@@ -22,7 +22,7 @@
 body{margin:0;background:var(--navy);color:var(--ink);
   font-family:Inter,-apple-system,system-ui,sans-serif;line-height:1.6;
   -webkit-font-smoothing:antialiased;}
-.wrap{max-width:1060px;margin:0 auto;padding:0 28px}
+.wrap{max-width:1280px;margin:0 auto;padding:0 30px}
 a{color:inherit}
 .serif{font-family:Fraunces,Georgia,serif}
 .gold{color:var(--gold)}
@@ -51,19 +51,28 @@ header{display:flex;align-items:center;justify-content:space-between;padding:22p
 .btn-solid:hover{background:var(--gold-bright);border-color:var(--gold-bright)}
 
 /* hero */
-.hero{padding:78px 0 64px;text-align:center}
-.hero .mark{width:88px;height:88px;border-radius:18px;margin:0 auto 30px;display:block;
-  box-shadow:0 18px 60px rgba(0,0,0,.45)}
-.eyebrow{font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:22px}
-h1{font-family:Fraunces,serif;font-weight:500;font-size:clamp(2.6rem,7vw,4.6rem);line-height:1.04;margin:0 0 22px;letter-spacing:-.01em}
-.hero p.lead{font-size:clamp(1.05rem,2.4vw,1.28rem);color:var(--muted);max-width:680px;margin:0 auto 36px}
-.cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.hero{padding:32px 0 34px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:46px;align-items:center}
+.hero .mark{width:60px;height:60px;border-radius:13px;margin:0 0 16px;display:block;box-shadow:0 14px 44px rgba(0,0,0,.45)}
+.eyebrow{font-size:.74rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:13px}
+h1{font-family:Fraunces,serif;font-weight:500;font-size:clamp(2.3rem,5vw,3.8rem);line-height:1.02;margin:0 0 15px;letter-spacing:-.01em}
+.hero p.lead{font-size:1.04rem;color:var(--muted);max-width:560px;margin:0 0 22px}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap}
+.fact-card{background:linear-gradient(180deg,rgba(16,39,73,.62),rgba(14,34,65,.28));border:1px solid var(--line);border-radius:18px;padding:24px 26px}
+.fact-card .blk{padding:12px 0;border-top:1px solid var(--line)}
+.fact-card .blk:first-child{padding-top:0;border-top:0}
+.fact-card h4{font-size:.69rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:0 0 5px}
+.fact-card p{margin:0;color:var(--muted);font-size:.91rem;line-height:1.5}
+.fact-card .ink{color:var(--ink);font-weight:500}
+.proof-line{margin-top:14px;padding:12px 15px;border-radius:11px;background:rgba(227,199,159,.08);border:1px solid var(--line);color:var(--muted);font-size:.89rem;line-height:1.5}
+.proof-line b{color:var(--gold)}
+@media(max-width:820px){.hero-grid{grid-template-columns:1fr;gap:24px}}
 
 /* divider rule */
 .rule{height:1px;background:var(--line);margin:8px 0}
 
 /* sections */
-section{padding:62px 0}
+section{padding:38px 0}
 .kicker{font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
 h2{font-family:Fraunces,serif;font-weight:500;font-size:clamp(1.7rem,4vw,2.5rem);line-height:1.12;margin:0 0 18px;letter-spacing:-.01em}
 .sub{color:var(--muted);max-width:640px;font-size:1.02rem}
@@ -79,6 +88,9 @@ h2{font-family:Fraunces,serif;font-weight:500;font-size:clamp(1.7rem,4vw,2.5rem)
 .tl .what{color:var(--muted)}
 .tag{display:inline-block;font-size:.72rem;letter-spacing:.04em;color:var(--gold);
   border:1px solid var(--line);border-radius:999px;padding:3px 10px;margin-left:6px}
+.what a{color:var(--gold);border-bottom:1px solid rgba(227,199,159,.4);text-decoration:none;transition:color .2s,border-color .2s}
+.what a:hover{color:var(--gold-bright);border-color:var(--gold-bright)}
+.what a b{color:inherit}
 
 /* grid cards */
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
@@ -133,13 +145,25 @@ footer{border-top:1px solid var(--line);padding:30px 0 50px;color:var(--muted-2)
 
   <!-- HERO -->
   <section class="hero">
-    <img class="mark" src="/assets/logo.png" alt="The Scarcity Trade — bottleneck mark">
-    <div class="eyebrow">Independent equity research · NYC</div>
-    <h1>The bottleneck<br>trade.</h1>
-    <p class="lead">I find underfollowed <span class="gold">Taiwan&nbsp;/&nbsp;Korea&nbsp;/&nbsp;Japan</span> small-cap dislocations — supply-chain chokepoints, holdco/NAV discounts, preferred/common gaps, semiconductor &amp; AI-supply-chain torque — before the activists, the consensus, or the English-language screens notice.</p>
-    <div class="cta-row">
-      <a class="btn-solid btn" href="mailto:dheeraj@scarcitytrade.com?subject=Intro%20—%20research">Request the research deck</a>
-      <a class="btn" href="https://scarcitytrade.substack.com" target="_blank" rel="noopener">Read the public work →</a>
+    <div class="hero-grid">
+      <div class="hero-left">
+        <img class="mark" src="/assets/logo.png" alt="The Scarcity Trade — bottleneck mark">
+        <div class="eyebrow">Independent equity research · NYC</div>
+        <h1>The bottleneck trade.</h1>
+        <p class="lead">I find underfollowed <span class="gold">Taiwan / Korea / Japan</span> small-cap dislocations — supply-chain chokepoints, holdco/NAV discounts, preferred/common gaps, semiconductor &amp; AI-supply-chain torque — before the activists, the consensus, or the English-language screens notice.</p>
+        <div class="cta-row">
+          <a class="btn-solid btn" href="mailto:dheeraj@scarcitytrade.com?subject=Intro%20—%20research">Request the research deck</a>
+          <a class="btn" href="https://scarcitytrade.substack.com" target="_blank" rel="noopener">Read the public work →</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="fact-card">
+          <div class="blk"><h4>Who</h4><p><span class="ink">Dheeraj Namburu</span> — independent analyst, NYC. Software engineer (tech); Brown (Econ + CS). Researching equities since 2022; chose tech over a sellside seat.</p></div>
+          <div class="blk"><h4>What you get</h4><p><span class="ink">2–4 actionable ideas / month</span> on underfollowed Asia small-caps — local-language filings, NAV/SOTP, catalyst maps, and bear/base/bull with MOIC.</p></div>
+          <div class="blk"><h4>The edge</h4><p>An AI pipeline I built that screens <span class="ink">~68,900 global small-caps</span> across ~156 countries into a ranked watchlist — then deep human underwriting on the survivors.</p></div>
+          <div class="proof-line"><b>Provably early:</b> published 2316.TW on May 22 → Palliser &amp; Metrica filed activist plans ~3 weeks later.</div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -152,15 +176,15 @@ footer{border-top:1px solid var(--line);padding:30px 0 50px;color:var(--muted-2)
       <div class="tl">
         <div class="row">
           <div class="date">May 22, 2026</div>
-          <div class="what"><b>Published 2316.TW (WUS Printed Circuit)</b> — a Taiwan holdco trading at ~25% of its listed-stake NAV in the Shenzhen AI-PCB leader 002463.SZ. <span class="tag">Holdco / NAV</span></div>
+          <div class="what"><a href="https://scarcitytrade.substack.com/p/the-super-hidden-printed-circuit" target="_blank" rel="noopener"><b>Published 2316.TW (WUS Printed Circuit)</b></a> — a Taiwan holdco trading at ~25% of its listed-stake NAV in the Shenzhen AI-PCB leader 002463.SZ. <span class="tag">Holdco / NAV</span></div>
         </div>
         <div class="row">
           <div class="date">Jun 10–15</div>
-          <div class="what"><b>Activists arrived on the same thesis</b> — Palliser Capital (~4%) filed a "WUS Value Enhancement Plan"; Metrica Partners (~1%) sent a board letter. ~3 weeks after my post. <span class="tag">Validated</span></div>
+          <div class="what"><a href="https://scarcitytrade.substack.com/p/activists-on-board-to-close-nav-discount" target="_blank" rel="noopener"><b>Activists arrived on the same thesis</b></a> — <a href="https://mms.businesswire.com/media/20260615754405/en/2830549/1/%5BEN%5D_Palliser_-_WUS_Value_Enhancement_Plan_-_vSent.pdf?download=1" target="_blank" rel="noopener">Palliser Capital</a> (~4%) filed a "WUS Value Enhancement Plan"; <a href="https://metricapartners.com/blog/2026/06/10/%e8%ac%b9%e5%b0%b1%e8%b2%b4%e5%85%ac%e5%8f%b8%e8%82%a1%e5%83%b9%e9%95%b7%e6%9c%9f%e5%a4%a7%e5%b9%85%e6%8a%98%e5%83%b9%e6%96%bc%e6%b7%a8%e5%80%bc%e3%80%81%e8%b3%87%e6%9c%ac%e9%85%8d%e7%bd%ae%e6%94%bf/" target="_blank" rel="noopener">Metrica Partners</a> (~1%) sent a board letter. ~3 weeks after my post. <span class="tag">Validated</span></div>
         </div>
         <div class="row">
           <div class="date">First on X</div>
-          <div class="what"><b>Mirae Corp (025560.KS)</b> — first tweet anywhere on a Korean ATE semiconductor test-handler the market still misfiles as auto/defense. Near-zero prior English coverage. <span class="tag">Original sourcing</span></div>
+          <div class="what"><a href="https://x.com/ScarcityTrade/status/2064892575014695364" target="_blank" rel="noopener"><b>Mirae Corp (025560.KS)</b></a> — first tweet anywhere on a Korean ATE semiconductor test-handler the market still misfiles as auto/defense. Near-zero prior English coverage. <span class="tag">Original sourcing</span></div>
         </div>
       </div>
     </div>
