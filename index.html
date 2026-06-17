@@ -51,8 +51,8 @@ header{display:flex;align-items:center;justify-content:space-between;padding:22p
 .btn-solid:hover{background:var(--gold-bright);border-color:var(--gold-bright)}
 
 /* hero */
-.hero{padding:32px 0 34px}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:46px;align-items:center}
+.hero{padding:12px 0 18px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:46px;align-items:start}
 .hero .mark{width:60px;height:60px;border-radius:13px;margin:0 0 16px;display:block;box-shadow:0 14px 44px rgba(0,0,0,.45)}
 .eyebrow{font-size:.74rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:13px}
 h1{font-family:Fraunces,serif;font-weight:500;font-size:clamp(2.3rem,5vw,3.8rem);line-height:1.02;margin:0 0 15px;letter-spacing:-.01em}
@@ -72,7 +72,7 @@ h1{font-family:Fraunces,serif;font-weight:500;font-size:clamp(2.3rem,5vw,3.8rem)
 .rule{height:1px;background:var(--line);margin:8px 0}
 
 /* sections */
-section{padding:38px 0}
+section{padding:26px 0}
 .kicker{font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
 h2{font-family:Fraunces,serif;font-weight:500;font-size:clamp(1.7rem,4vw,2.5rem);line-height:1.12;margin:0 0 18px;letter-spacing:-.01em}
 .sub{color:var(--muted);max-width:640px;font-size:1.02rem}
@@ -91,6 +91,15 @@ h2{font-family:Fraunces,serif;font-weight:500;font-size:clamp(1.7rem,4vw,2.5rem)
 .what a{color:var(--gold);border-bottom:1px solid rgba(227,199,159,.4);text-decoration:none;transition:color .2s,border-color .2s}
 .what a:hover{color:var(--gold-bright);border-color:var(--gold-bright)}
 .what a b{color:inherit}
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}
+.work{display:flex;flex-direction:column;gap:6px;padding:15px 16px;border:1px solid var(--line);border-radius:13px;background:rgba(16,39,73,.4);text-decoration:none;transition:border-color .2s,background .2s}
+.work:hover{border-color:var(--gold);background:rgba(16,39,73,.72)}
+.work .wdate{font-size:.71rem;color:var(--gold);letter-spacing:.04em}
+.work .wtitle{font-size:.95rem;color:var(--ink);font-weight:500;line-height:1.25}
+.work .wnote{font-size:.83rem;color:var(--muted);line-height:1.45}
+.seeall{display:inline-block;margin-top:18px;color:var(--gold);text-decoration:none;font-size:.88rem;border-bottom:1px solid var(--line)}
+.seeall:hover{color:var(--gold-bright)}
+@media(max-width:820px){.work-grid{grid-template-columns:1fr}}
 
 /* grid cards */
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
@@ -187,6 +196,18 @@ footer{border-top:1px solid var(--line);padding:30px 0 50px;color:var(--muted-2)
           <div class="what"><a href="https://x.com/ScarcityTrade/status/2064892575014695364" target="_blank" rel="noopener"><b>Mirae Corp (025560.KS)</b></a> — first tweet anywhere on a Korean ATE semiconductor test-handler the market still misfiles as auto/defense. Near-zero prior English coverage. <span class="tag">Original sourcing</span></div>
         </div>
       </div>
+
+      <div class="rule" style="margin:30px 0 0"></div>
+      <div class="kicker" style="margin-top:26px;margin-bottom:0">Selected published work</div>
+      <div class="work-grid">
+        <a class="work" href="https://scarcitytrade.substack.com/p/the-smallest-toll-booth-in-a-bigger" target="_blank" rel="noopener"><span class="wdate">Jun 11, 2026 · semicap</span><span class="wtitle">The Smallest Toll Booth in a Bigger Memory Cycle</span><span class="wnote">Korean semiconductor-equipment supplier whose 2026 order book already exceeds full-year 2025 revenue.</span></a>
+        <a class="work" href="https://scarcitytrade.substack.com/p/the-memory-giant-at-the-center-of" target="_blank" rel="noopener"><span class="wdate">Oct 28, 2025 · AI / memory</span><span class="wtitle">The Memory Giant at the Center of the AI Revolution</span><span class="wnote">A memory leader powering the AI build-out — still trading under ~15× earnings.</span></a>
+        <a class="work" href="https://scarcitytrade.substack.com/p/convex-ai-trade-opportunity" target="_blank" rel="noopener"><span class="wdate">Jun 3, 2026 · AI supply chain</span><span class="wtitle">Convex AI Trade Opportunity</span><span class="wnote">An underfollowed, convex way to play AI-infrastructure upside.</span></a>
+        <a class="work" href="https://scarcitytrade.substack.com/p/the-quiet-supplier-hiding-in-plain" target="_blank" rel="noopener"><span class="wdate">May 27, 2026 · value</span><span class="wtitle">The Quiet Supplier Hiding in Plain Sight</span><span class="wnote">An overlooked industrial microcap where earnings and narrative are both inflecting.</span></a>
+        <a class="work" href="https://scarcitytrade.substack.com/p/a-copper-mine-nobodys-watching-yet" target="_blank" rel="noopener"><span class="wdate">Jan 26, 2026 · commodity</span><span class="wtitle">A Copper Mine Nobody's Watching (Yet)</span><span class="wnote">A Yukon copper junior — scarcity leverage into a tightening metal market.</span></a>
+        <a class="work" href="https://scarcitytrade.substack.com/p/the-governments-recurring-revenue" target="_blank" rel="noopener"><span class="wdate">Jan 27, 2026 · special situation</span><span class="wtitle">The Government's Recurring Revenue Machine</span><span class="wnote">A microcap on a sticky government contract at roughly 5× EBITDA.</span></a>
+      </div>
+      <a class="seeall" href="https://scarcitytrade.substack.com/archive" target="_blank" rel="noopener">See the full archive on Substack ↗</a>
     </div>
   </section>
 
