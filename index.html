@@ -114,7 +114,15 @@ section{padding:30px 0}
 .tbl td{padding:14px 16px 14px 0;border-bottom:1px solid var(--line);color:var(--body);vertical-align:top}
 .tbl td.ink{color:var(--ink)}
 .tbl a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--line)}
-.note-sm{color:var(--muted);font-size:.86rem;margin-top:14px}
+.note-sm{color:var(--muted);font-size:.86rem;margin-top:14px;max-width:80ch}
+.perf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:20px 0 14px}
+.perf{border:1px solid var(--line);border-radius:12px;padding:18px 20px;background:linear-gradient(180deg,rgba(230,205,166,.06),rgba(16,39,73,.24))}
+.perf .pv{font-family:Fraunces,serif;font-size:2.05rem;color:var(--gold);line-height:1}
+.perf.bench .pv{color:var(--body)}
+.perf .pl{color:var(--muted);font-size:.86rem;margin-top:9px;line-height:1.45}
+.perf-row{color:var(--body);font-size:.94rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin:4px 0 16px;max-width:none}
+.perf-row b{color:var(--ink)}
+@media(max-width:860px){.perf-grid{grid-template-columns:1fr}}
 
 /* archive cards (published work) */
 .work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
@@ -265,10 +273,16 @@ footer p{max-width:none;margin:0 0 6px}
   <!-- TRACK RECORD -->
   <section id="record" class="divide">
     <div class="kicker">Track record</div>
-    <h2>Outcomes, including those still open.</h2>
-    <p class="sub">Position-level returns are maintained in verified brokerage statements (Interactive Brokers) and provided to funds on request. A complete record — including unresolved and unsuccessful ideas — is more useful than a list of winners.</p>
+    <h2>Verified personal performance.</h2>
+    <p class="sub">Time-weighted returns from my personal brokerage account, as reported by Interactive Brokers PortfolioAnalyst. A personal, concentrated account — not a managed-fund composite — shown with its drawdowns, not just its gains.</p>
+    <div class="perf-grid">
+      <div class="perf"><div class="pv tnum">+412.6%</div><div class="pl">Since inception, time-weighted<br>Jul 20, 2023 – Jun 16, 2026</div></div>
+      <div class="perf bench"><div class="pv tnum">+71.2%</div><div class="pl">S&amp;P 500 (Total Return)<br>Same period, same basis</div></div>
+      <div class="perf"><div class="pv tnum">+408.1%</div><div class="pl">Trailing 12 months<br>vs. S&amp;P 500 +27.2%</div></div>
+    </div>
+    <div class="perf-row">Sharpe <b>0.95</b> &nbsp;·&nbsp; max drawdown <b>48.9%</b> &nbsp;·&nbsp; annualized volatility <b>22.7%</b> &nbsp;·&nbsp; largest position <b>Mirae Corp (025560.KS)</b>, an idea I sourced early.</div>
     <table class="tbl">
-      <thead><tr><th>Thesis</th><th>Published</th><th>Entry</th><th>Targets (bear / base / bull)</th><th>Status</th><th>Memo</th></tr></thead>
+      <thead><tr><th>Published thesis</th><th>Published</th><th>Entry</th><th>Targets (bear / base / bull)</th><th>Status</th><th>Memo</th></tr></thead>
       <tbody>
         <tr>
           <td class="ink">WUS Printed Circuit (2316.TW)</td>
@@ -280,7 +294,7 @@ footer p{max-width:none;margin:0 0 6px}
         </tr>
       </tbody>
     </table>
-    <p class="note-sm">Verified return and benchmark-relative figures are being added from brokerage statements. Request the full performance record for the underlying detail.</p>
+    <p class="note-sm">Personal brokerage account; high concentration and volatility, with the majority of cumulative gains realized in 2026. Returns are time-weighted per Interactive Brokers PortfolioAnalyst (Jul 20, 2023 – Jun 16, 2026). Past performance does not guarantee future results; this is a personal account, not a managed-fund track record, and nothing here is investment advice. Full statement available to funds on request.</p>
   </section>
 
   <!-- RESEARCH PROCESS -->
