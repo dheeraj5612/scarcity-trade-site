@@ -136,6 +136,9 @@ section{padding:30px 0}
 .perf .pl{color:var(--muted);font-size:.86rem;margin-top:9px;line-height:1.45}
 .perf-row{color:var(--body);font-size:.94rem;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;margin:4px 0 16px;max-width:none}
 .perf-row b{color:var(--ink)}
+.verified{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:999px;padding:7px 15px;font-size:.82rem;color:var(--body);background:rgba(230,205,166,.06);margin:2px 0 4px}
+.verified .ck{width:17px;height:17px;border-radius:50%;background:var(--gold);color:var(--navy);display:inline-flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;line-height:1}
+.verified b{color:var(--ink);font-weight:600}
 @media(max-width:860px){.perf-grid{grid-template-columns:1fr}}
 
 /* archive cards (published work) */
@@ -292,7 +295,8 @@ footer p{max-width:none;margin:0 0 6px}
   <section id="record" class="divide">
     <div class="kicker">Track record</div>
     <h2>Verified personal performance.</h2>
-    <p class="sub">Time-weighted returns from my personal brokerage account, as reported by Interactive Brokers PortfolioAnalyst. A personal, concentrated account, not a managed-fund composite, shown with its drawdowns, not just its gains.</p>
+    <p class="sub">Time-weighted returns from my personal brokerage account. A personal, concentrated account, not a managed-fund composite, shown with its drawdowns, not just its gains.</p>
+    <div class="verified"><span class="ck">✓</span>&nbsp;Independently verified ·&nbsp;<b>Interactive Brokers PortfolioAnalyst</b></div>
     <div class="perf-grid">
       <div class="perf"><div class="pv tnum">+412.6%</div><div class="pl">Since inception, time-weighted<br>Jul 20, 2023 – Jun 16, 2026</div></div>
       <div class="perf bench"><div class="pv tnum">+71.2%</div><div class="pl">S&amp;P 500 (Total Return)<br>Same period, same basis</div></div>
