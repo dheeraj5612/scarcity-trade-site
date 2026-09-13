@@ -75,6 +75,24 @@ section{padding:30px 0}
 .divide{border-top:1px solid var(--line)}
 .sub{color:var(--body);max-width:66ch}
 
+/* prominent historical performance */
+.performance-banner{background:var(--gold-bright);color:var(--navy);border-radius:16px;padding:28px 32px;margin:8px 0 24px;box-shadow:0 12px 40px rgba(0,0,0,.18)}
+.performance-banner .kicker{color:#485365;margin:0 0 10px}
+.performance-banner h2{color:var(--navy);margin-bottom:20px}
+.performance-highlights{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:24px;margin:0 0 20px}
+.performance-highlights div+div{border-left:1px solid rgba(10,26,48,.22);padding-left:24px}
+.performance-highlights dt{font-size:.85rem;line-height:1.45}
+.performance-highlights dd{font-family:Fraunces,serif;font-size:clamp(2.4rem,5.8vw,4.4rem);line-height:1.1;letter-spacing:-.04em;margin:6px 0 0;font-variant-numeric:tabular-nums}
+.performance-highlights small{display:block;font-size:.78rem;margin-top:5px}
+.performance-banner .performance-context{font-size:.85rem;max-width:none;margin-bottom:12px}
+.performance-banner a{font-weight:600;text-underline-offset:4px;font-size:.9rem}
+@media(max-width:600px){
+  .performance-banner{padding:22px 20px}
+  .performance-highlights{grid-template-columns:1fr;gap:16px}
+  .performance-highlights div+div{border-left:0;border-top:1px solid rgba(10,26,48,.22);padding:14px 0 0}
+  .performance-highlights dd{font-size:3.3rem}
+}
+
 /* hero */
 .hero{padding:18px 0 26px}
 .statline{color:var(--muted);font-size:.92rem;border-top:1px solid var(--line);padding-top:16px;max-width:none}
@@ -196,6 +214,19 @@ footer p{max-width:none;margin:0 0 6px}
       <a href="mailto:dheeraj@scarcitytrade.com">Contact</a>
     </nav>
   </header>
+
+  <!-- HISTORICAL PERFORMANCE HIGHLIGHTS -->
+  <section class="performance-banner" aria-labelledby="performance-heading">
+    <div class="kicker">Personal account · Historical performance</div>
+    <h2 id="performance-heading">The results behind the research.</h2>
+    <dl class="performance-highlights">
+      <div><dt>Since inception</dt><dd>+412.6%</dd><small>Jul 20, 2023 – Jun 16, 2026</small></div>
+      <div><dt>S&amp;P 500 total return</dt><dd>+71.2%</dd><small>Same period as inception return</small></div>
+      <div><dt>Trailing 12 months</dt><dd>+408.1%</dd><small>Ended Jun 16, 2026 · S&amp;P 500: +27.2%</small></div>
+    </dl>
+    <p class="performance-context"><strong>Maximum drawdown: 48.9%.</strong> Broker-calculated, unaudited time-weighted returns from Interactive Brokers PortfolioAnalyst. Concentrated personal account; not a managed-fund composite. Snapshot through June 16, 2026, not updated for subsequent performance. Past performance does not guarantee future results.</p>
+    <a href="#record">View the full track record and methodology →</a>
+  </section>
 
   <!-- HERO -->
   <section class="hero">
